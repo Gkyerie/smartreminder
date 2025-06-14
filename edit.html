@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Task</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .form-container {
+      max-width: 720px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Edit Task</h2>
+    <form onsubmit="alert('Ini hanya tampilan statis. Perubahan tidak akan disimpan.'); return false;">
+      <div class="mb-3">
+        <label for="title" class="form-label">Judul</label>
+        <input type="text" class="form-control" id="title" value="Belajar UAS WAD">
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Kategori</label>
+        <select class="form-select" id="category">
+          <option selected>Kuliah</option>
+          <option>Organisasi</option>
+          <option>Tugas</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="due_date" class="form-label">Tanggal Deadline</label>
+        <input type="date" class="form-control" id="due_date" value="2025-06-20">
+      </div>
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <select class="form-select" id="status">
+          <option>Belum Selesai</option>
+          <option selected>Selesai</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Deskripsi</label>
+        <textarea class="form-control" id="description" rows="4">Review semua materi, buat rangkuman.</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</body>
+</html>
